@@ -7,8 +7,8 @@ A typical RNA-seq workflow to call differentially expressed genes looks like thi
 2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/fastqc.sbatch)
 3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/multiqc.sbatch)
 4. [hisat2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/hisat2.sbatch)
-5. [featureCounts.sbatch (references bam_order.txt)](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/featureCounts.sbatch)
-6. [DESeq2_genes.R (references gencode_vM18_crossref.txt and gencode_vM18_tss.bed)](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_genes.R)
+5. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/featureCounts.sbatch) (references bam_order.txt)
+6. [DESeq2_genes.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_genes.R) (references gencode_vM18_crossref.txt and gencode_vM18_tss.bed)
 7. Get top 750 ISGs, IRGs, nonresponsive genes
 8. Dicer1 gene expression count plots
 
