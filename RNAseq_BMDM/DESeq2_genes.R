@@ -29,8 +29,8 @@ countdata <- countdata[ ,-c(1:6)]
 
 # Remove suffix and path (if necessary) from column names
 colnames(countdata) <- gsub("\\.sorted.uniq.bam$", "", colnames(countdata))
-colnames(countdata) <- gsub("\\X.Users.path.to.working.directory.picc", "", colnames(countdata))
-colnames(countdata) <- gsub("\\X.Users.path.to.working.directory.plat", "", colnames(countdata))
+colnames(countdata) <- gsub("\\X.Users.path.to.working.directory", "", colnames(countdata))
+colnames(countdata) <- gsub("\\X.Users.path.to.working.directory", "", colnames(countdata))
 
 # Match gene names to gene IDs
 countdata <- left_join(countdata, crossref, by = "gene_id")
@@ -43,7 +43,7 @@ countdata <- subset(countdata, select = -c(gene, gene_name))
 countdata_picc <- select(countdata, contains("picc_"))
 countdata_plat <- select(countdata, contains("plat_"))
 
-# Convert countdata tables into a matrix - necessary for running DESeq2.
+# Convert countdata tables into a matrix
 countdata_picc <- as.matrix(countdata_picc)
 countdata_plat <- as.matrix(countdata_plat)
 
