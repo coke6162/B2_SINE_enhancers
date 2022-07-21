@@ -1,0 +1,15 @@
+picc_BMDM_UT_R1.sorted.uniq.bam
+picc_BMDM_UT_R2.sorted.uniq.bam
+picc_BMDM_UT_R3.sorted.uniq.bam
+picc_BMDM_IFNG_2h_R1.sorted.uniq.bam
+picc_BMDM_IFNG_2h_R2.sorted.uniq.bam
+picc_BMDM_IFNG_2h_R3.sorted.uniq.bam
+picc_BMDM_IFNG_4h_R1.sorted.uniq.bam
+picc_BMDM_IFNG_4h_R2.sorted.uniq.bam
+picc_BMDM_IFNG_4h_R3.sorted.uniq.bam
+plat_BMDM_UT_R1.sorted.uniq.bam
+plat_BMDM_UT_R2.sorted.uniq.bam
+plat_BMDM_UT_R3.sorted.uniq.bam
+plat_BMDM_IFNG_2h_R1.sorted.uniq.bam
+plat_BMDM_IFNG_2h_R2.sorted.uniq.bam
+plat_BMDM_IFNG_2h_R3.sorted.uniq.bam
