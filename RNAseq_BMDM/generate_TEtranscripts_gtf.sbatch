@@ -4,8 +4,8 @@
 # STAT1-bound B2_Mm2 elements are annotated separately from unbound B2_Mm2
 # B2_Mm2 status is defined using paired STAT1 ChIP-seq data
 
-# This script takes RepeatMasker output generated using Dfam annotation
-# RepeatMasker output file not provided throug hrepos
+# This script takes RepeatMasker output generated using Dfam v3.0 annotation
+# RepeatMasker output file available upon request
 
 # For convenience, ChIP-seq files are provided on repos
 # See "ChIPseq_BMDM" repos for how to generate these files
