@@ -20,7 +20,7 @@ A typical RNA-seq workflow to call differentially expressed TE families looks li
 5. [generate_TEtranscripts_gtf.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/generate_TEtranscripts_gtf.sbatch)
 6. [TEtranscripts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/TEtranscripts.sbatch)
 7. [DESeq2_TEtranscripts.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_TEtranscripts.R)
-8. B2_Mm2 expression count plots]()
+8. B2_Mm2 expression count plots
 
 Required packages:
 * BBMap v38.05 (https://jgi.doe.gov/data-and-tools/bbtools/)
