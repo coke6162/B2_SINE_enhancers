@@ -29,6 +29,6 @@ do
 done
 
 # Get random 750 nonresponsive genes (padj > 0.90, baseMean > 100, abs(log2FC) < 0.10)
-shuf -n 750 --random-source=<(get_seeded_random $seed) $REST picc_BMDM_IFNG_4h_nonresponsive_padj0.90_baseMean100_log2FC0.10.bed \
+shuf -n 750 --random-source=<(get_seeded_random $seed) $REST picc_BMDM_IFNG_4h_vs_UT_nonresponsive_padj0.90_baseMean100_log2FC0.10.bed \
 | bedtools sort -i \
-> picc_BMDM_IFNG_4h_nonresponsive_padj0.90_baseMean100_log2FC0.10_random750.bed
+> picc_BMDM_IFNG_4h_vs_UT_nonresponsive_padj0.90_baseMean100_log2FC0.10_random750.bed

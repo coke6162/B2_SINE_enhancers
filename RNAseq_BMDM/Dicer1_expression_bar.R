@@ -2,9 +2,9 @@
 workingDir <- "/Users/path/to/working/directory"
 
 # Read in counts table
-data_picc_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_2h.txt"), sep = "", header = FALSE)
-data_picc_4h <- read.csv(file.path(workingDir, "plat_BMDM_IFNG_2h.txt"), sep = "", header = FALSE)
-data_plat_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_4h.txt"), sep = "", header = FALSE)
+data_picc_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_2h_vs_UT.txt"), sep = "", header = FALSE)
+data_picc_4h <- read.csv(file.path(workingDir, "plat_BMDM_IFNG_2h_vs_UT.txt"), sep = "", header = FALSE)
+data_plat_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_4h_vs_UT.txt"), sep = "", header = FALSE)
 
 # Filter all columns except those containing gene names or counts
 data_picc_2h <- select(data_picc_2h, !contains(c("baseMean", "log2FoldChange", "lfcSE", "stat", "pvalue", "padj", "IFNG_4h")))
@@ -61,7 +61,7 @@ picc_combined_Dicer1 <- ggplot(data = data_picc_combined_Dicer1,
         axis.title.x = element_text(size = 12, color = "black"),
         legend.position = "none")
 picc_combined_Dicer1
-ggsave("bar_picc_combined_Dicer1.pdf", plot = picc_combined_Dicer1, height = 2, width = 2.75, units = "in", useDingbats = FALSE)
+ggsave("bar_picc_2h_and_4h_vs_UT_Dicer1.pdf", plot = picc_combined_Dicer1, height = 2, width = 2.75, units = "in", useDingbats = FALSE)
 
 # Plot Platanitis 2h
 plat_2h_Dicer1 <- ggplot(data = data_plat_2h_Dicer1, 
@@ -79,4 +79,4 @@ plat_2h_Dicer1 <- ggplot(data = data_plat_2h_Dicer1,
         axis.title.x = element_text(size = 12, color = "black"),
         legend.position = "none")
 plat_2h_Dicer1
-ggsave("bar_plat_2h_Dicer1.pdf", plot = plat_2h_Dicer1, height = 2, width = 2.75, units = "in", useDingbats = FALSE)
+ggsave("bar_plat_2h_vs_UT_Dicer1.pdf", plot = plat_2h_Dicer1, height = 2, width = 2.75, units = "in", useDingbats = FALSE)

@@ -113,9 +113,9 @@ resdataLFC_plat_2h <- merge(as.data.frame(resLFC_plat_2h), as.data.frame(dds_pla
 names(resdataLFC_plat_2h)[1] <- "gene"
 
 # Write DESeq2 output files
-write.table(resdata_picc_2h, file.path(workingDir, "picc_BMDM_IFNG_2h.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
-write.table(resdata_picc_4h, file.path(workingDir, "picc_BMDM_IFNG_4h.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
-write.table(resdata_plat_2h, file.path(workingDir, "plat_BMDM_IFNG_2h.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
-write.table(resdataLFC_picc_2h, file.path(workingDir, "picc_BMDM_IFNG_2h_LFC_apeglm.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
-write.table(resdataLFC_picc_4h, file.path(workingDir, "picc_BMDM_IFNG_4h_LFC_apeglm.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
-write.table(resdataLFC_plat_2h, file.path(workingDir, "plat_BMDM_IFNG_2h_LFC_apeglm.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdata_picc_2h, file.path(workingDir, "picc_BMDM_IFNG_2h_vs_UT_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdata_picc_4h, file.path(workingDir, "picc_BMDM_IFNG_4h_vs_UT_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdata_plat_2h, file.path(workingDir, "plat_BMDM_IFNG_2h_vs_UT_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdataLFC_picc_2h, file.path(workingDir, "picc_BMDM_IFNG_2h_vs_UT_LFC_apeglm_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdataLFC_picc_4h, file.path(workingDir, "picc_BMDM_IFNG_4h_vs_UT_LFC_apeglm_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
+write.table(resdataLFC_plat_2h, file.path(workingDir, "plat_BMDM_IFNG_2h_vs_UT_LFC_apeglm_TEtranscripts.txt"), quote = FALSE, row.names = FALSE, sep = "\t")
