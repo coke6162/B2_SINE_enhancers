@@ -66,12 +66,12 @@ dds_plat <- DESeq(dds_plat)
 # Get differential expression results
 res_picc_2h <- results(dds_picc, contrast=c("treatment_picc", "IFNG_2h", "UT"))
 res_picc_4h <- results(dds_picc, contrast=c("treatment_picc", "IFNG_4h", "UT"))
-res_plat_2h <- results(dds_picc, contrast=c("treatment_plat", "IFNG_2h", "UT"))
+res_plat_2h <- results(dds_plat, contrast=c("treatment_plat", "IFNG_2h", "UT"))
 
 # Get differential expression results, this time shrinking by apeglm for visualization
 resLFC_picc_2h <- lfcShrink(dds_picc, coef="treatment_picc_IFNG_2h_vs_UT", type="apeglm")
 resLFC_picc_4h <- lfcShrink(dds_picc, coef="treatment_picc_IFNG_4h_vs_UT", type="apeglm")
-resLFC_plat_2h <- lfcShrink(dds_picc, coef="treatment_plat_IFNG_2h_vs_UT", type="apeglm")
+resLFC_plat_2h <- lfcShrink(dds_plat, coef="treatment_plat_IFNG_2h_vs_UT", type="apeglm")
 
 # Extract normalized counts
 dds_picc <- as.data.frame(counts(dds_picc, normalized = TRUE))
