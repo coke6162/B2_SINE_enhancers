@@ -32,7 +32,15 @@ List of programs used for all analyses.
 * bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
-Details details.
+ChIP-seq and RNA-seq data in murine primary bone marrow derived macrophages (BMDMs) were downloaded from publicly available datasets and processed as described below. All data were aligned to mm10. 
+
+1. Identify interferon-inducible genes and transposon families
+RNA-seq reads were assigned to gene annotation using Gencode vM19, and interferon stimulated genes (ISGs) were identified using DESeq2 comparing BMDMs stimulated with interferon gamma (IFNG) relative to untreated. Family-level transposable element (TE) expression was determined by realigning RNA-seq reads using hisat2, allowing multimappers (see [hisat2_k100.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/hisat2_k100.sbatch)). Reads were assigned to TE families using TEtranscripts with a custom GTF annotation file derived from Dfam annotation (see [generate_TEtranscripts_gtf.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/generate_TEtranscripts_gtf.sbatch)). IFNG-inducible TE families were identified using DESeq2.
+
+2. Identify STAT1-bound regions and test for family-level TE enrichment
+
+
+3. Assess STAT1 and CTCF binding over B2 SINE subfamilies
 
 RNA-seq Workflow:
 1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/bbduk.sbatch)
