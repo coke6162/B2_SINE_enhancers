@@ -1,13 +1,5 @@
-# Load required packages
-# Credit for function: https://gist.github.com/smithdanielle/9913897
-check.packages <- function(pkg){
-    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
-    if (length(new.pkg))
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
-packages <- c("dplyr", "DESeq2", "apeglm")
-check.packages(packages)
+# Load packages
+library("dplyr", "DESeq2", "apeglm")
 
 # Set input directory
 # This should be the directory that hosts your count table

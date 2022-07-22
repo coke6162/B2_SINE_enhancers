@@ -1,3 +1,6 @@
+# Load packages
+library("dplyr", "tidyr", "plotrix", "ggplot2")
+
 # Set input directory
 workingDir <- "/Users/path/to/working/directory"
 
