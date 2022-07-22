@@ -10,15 +10,15 @@ writeLines(capture.output(sessionInfo()), file.path(workingDir, "session_info.tx
 
 # Read in counts table
 countdata_picc_2h <- read.csv(file.path(workingDir, "piccolo_IFNG_2h_vs_UT_TEsonly.cntTable"), sep = "", header = FALSE)
-countdata_plat_2h <- read.csv(file.path(workingDir, "platanitis_IFNG_2h_vs_UT_TEsonly.cntTable"), sep = "", header = FALSE)
 countdata_picc_4h <- read.csv(file.path(workingDir, "piccolo_IFNG_4h_vs_UT_TEsonly.cntTable"), sep = "", header = FALSE)
+countdata_plat_2h <- read.csv(file.path(workingDir, "platanitis_IFNG_2h_vs_UT_TEsonly.cntTable"), sep = "", header = FALSE)
 
 # Rename columns
 # TEtranscripts reorders the columns according to name
 # Double check the ".cntTable" (not "TEsonly.cntTable") file for column order
 colnames(countdata_picc_2h) <- c("family", "picc_IFNG_2h_R3", "picc_IFNG_2h_R1", "picc_IFNG_2h_R2", "picc_UT_R3", "picc_UT_R2", "picc_UT_R1")
 colnames(countdata_picc_4h) <- c("family", "picc_IFNG_4h_R2", "picc_IFNG_4h_R1", "picc_IFNG_4h_R3", "picc_UT_R3", "picc_UT_R2", "picc_UT_R1")
-colnames(countdata_picc_2h) <- c("family", "plat_IFNG_2h_R3", "plat_IFNG_2h_R2", "plat_IFNG_2h_R1", "plat_UT_R1", "plat_UT_R2", "plat_UT_R3")
+colnames(countdata_plat_2h) <- c("family", "plat_IFNG_2h_R3", "plat_IFNG_2h_R2", "plat_IFNG_2h_R1", "plat_UT_R1", "plat_UT_R2", "plat_UT_R3")
 
 # Optionally, reorder columns
 countdata_picc_2h <- countdata_picc_2h[, c(1, 7, 6, 5, 3, 4, 2)]
@@ -70,7 +70,7 @@ dds_plat_2h$treatment_plat_2h <- relevel(dds_plat_2h$treatment_plat_2h, ref = "U
 
 # Run DESeq2
 dds_picc_2h <- DESeq(dds_picc_2h)
-dds_plat_2h <- DESeq(dds_plat_2h)
+dds_picc_4h <- DESeq(dds_picc_4h)
 dds_plat_2h <- DESeq(dds_plat_2h)
 
 # Get differential expression results
@@ -81,7 +81,7 @@ res_plat_2h <- results(dds_picc, contrast=c("treatment_plat", "IFNG_2h", "UT"))
 # Get differential expression results, this time shrinking by apeglm for visualization
 resLFC_picc_2h <- lfcShrink(dds_picc, coef="treatment_picc_IFNG_2h_vs_UT", type="apeglm")
 resLFC_picc_4h <- lfcShrink(dds_picc, coef="treatment_picc_IFNG_4h_vs_UT", type="apeglm")
-resLFC_plat_2h <- lfcShrink(dds_picc, coef="treatment_plat_IFNG_2h_vs_UT", type="apeglm")
+resLFC_plat_2h <- lfcShrink(dds_plat, coef="treatment_plat_IFNG_2h_vs_UT", type="apeglm")
 
 # Extract normalized counts
 dds_picc_2h <- as.data.frame(counts(dds_picc_2h, normalized = TRUE))

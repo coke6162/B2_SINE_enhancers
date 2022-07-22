@@ -6,8 +6,8 @@ workingDir <- "/Users/path/to/working/directory"
 
 # Read in counts table
 data_picc_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_2h_vs_UT.txt"), sep = "", header = FALSE)
-data_picc_4h <- read.csv(file.path(workingDir, "plat_BMDM_IFNG_2h_vs_UT.txt"), sep = "", header = FALSE)
-data_plat_2h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_4h_vs_UT.txt"), sep = "", header = FALSE)
+data_picc_4h <- read.csv(file.path(workingDir, "picc_BMDM_IFNG_4h_vs_UT.txt"), sep = "", header = FALSE)
+data_plat_2h <- read.csv(file.path(workingDir, "plat_BMDM_IFNG_2h_vs_UT.txt"), sep = "", header = FALSE)
 
 # Filter all columns except those containing gene names or counts
 data_picc_2h <- select(data_picc_2h, !contains(c("baseMean", "log2FoldChange", "lfcSE", "stat", "pvalue", "padj", "IFNG_4h")))
