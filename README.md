@@ -1,4 +1,5 @@
 # B2_SINE_enhancers
+WORK IN PROGRESS
 
 ## Scripts and files used in study:
 
@@ -23,6 +24,12 @@ List of programs used for all analyses.
 * Subread v1.6.2 (http://subread.sourceforge.net/)
 * DESeq2 v1.26.0 (https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
 * TEtranscripts v2.1.4 (https://github.com/mhammell-laboratory/TEtranscripts)
+* MACS2 v2.1.1 (https://pypi.org/project/MACS2/)
+* BWA v0.7.15 (https://github.com/lh3/bwa)
+* MEME Suite v5.4.1 (https://meme-suite.org/meme/)
+* Singularity v3.1.1 (https://github.com/hpcng/singularity)
+* deepTools v3.0.1 (https://deeptools.readthedocs.io/en/develop/index.html)
+* bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
 Details details.
