@@ -35,8 +35,24 @@ List of programs used for all analyses.
 Details details.
 
 RNA-seq Workflow:
+1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/bbduk.sbatch)
+2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/fastqc.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/multiqc.sbatch)
+4. [hisat2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/hisat2.sbatch)
+5. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/featureCounts.sbatch) (references bam_order.txt)
+6. [DESeq2_genes.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_genes.R) (references gencode_vM18_crossref.txt and gencode_vM18_tss.bed)
+7. [extract_top_750_ISGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_ISGs.sh), [extract_top_750_IRGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_IRGs.sh), [extract_random_750_nonresponsive_genes.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_random_750_nonresponsive_genes.sh)
+8. [Dicer1_expression_bar.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/Dicer1_expression_bar.R)
 
 For TEtranscripts, realign bams to allow multiple alignments per read:
+1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/bbduk.sbatch)
+2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/fastqc.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/multiqc.sbatch)
+4. [hisat2_k100.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/hisat2_k100.sbatch)
+5. [generate_TEtranscripts_gtf.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/generate_TEtranscripts_gtf.sbatch)
+6. [TEtranscripts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/TEtranscripts.sbatch)
+7. [DESeq2_TEtranscripts.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_TEtranscripts.R)
+8. [TEtranscripts_B2_bar_expression.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/TEtranscripts_B2_bar_expression.R)
 
 ChIP-seq Workflow:
 
