@@ -26,10 +26,12 @@ List of programs used for all analyses:
 * TEtranscripts v2.1.4 (https://github.com/mhammell-laboratory/TEtranscripts)
 * MACS2 v2.1.1 (https://pypi.org/project/MACS2/)
 * BWA v0.7.15 (https://github.com/lh3/bwa)
+* Picard v2.6.0 (https://broadinstitute.github.io/picard/)
 * MEME Suite v5.4.1 (https://meme-suite.org/meme/)
 * Singularity v3.1.1 (https://github.com/hpcng/singularity)
-* deepTools v3.0.1 (https://deeptools.readthedocs.io/en/develop/index.html)
+* deepTools v3.5.1 (https://deeptools.readthedocs.io/en/develop/index.html)
 * bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
+* GIGGLE v0.6.3 (https://github.com/ryanlayer/giggle)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
 ChIP-seq and RNA-seq data in murine primary bone marrow derived macrophages (BMDMs) were downloaded from publicly available datasets and processed as described below. All data were aligned to mm10. 
