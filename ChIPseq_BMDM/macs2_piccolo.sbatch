@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Script for calling H3K27ac and STAT1 peaks using data from Piccolo et al. 2017
-# H3K27ac peaks are called relative to provided input using q-value cutoff of 0.01
-# STAT1 peaks are called relative to provided input using p-value cutoff of 0.01
-# Relaxed cutoff used because only peaks intersecting both replicates will be retained (see intersect_peak_replicates.sbatch)
+# H3K27ac and STAT1 peaks are called relative to provided input using p-value cutoff of 0.01
 
 # Example usage:
 # sbatch macs2_piccolo.sbatch
@@ -30,7 +28,7 @@ macs2 callpeak \
 -t picc_BMDM_WT_UT_H3K27ac.sorted.dedup.bam \
 -c picc_BMDM_WT_UT_input.sorted.dedup.bam \
 --name picc_BMDM_WT_UT_H3K27ac \
---format BAM --gsize mm --qvalue 0.01 \
+--format BAM --gsize mm --pvalue 0.01 \
 --bdg --SPMR --call-summits
 
 # Call peaks for IFNG 2h H3K27ac
@@ -40,7 +38,7 @@ macs2 callpeak \
 -t picc_BMDM_WT_IFNG_2h_H3K27ac.sorted.dedup.bam \
 -c picc_BMDM_WT_UT_input.sorted.dedup.bam \
 --name picc_BMDM_WT_IFNG_2h_H3K27ac \
---format BAM --gsize mm --qvalue 0.01 \
+--format BAM --gsize mm --pvalue 0.01 \
 --bdg --SPMR --call-summits
 
 # Call peaks for UT STAT1
