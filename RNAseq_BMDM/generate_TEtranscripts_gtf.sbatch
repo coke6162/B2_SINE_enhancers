@@ -5,7 +5,7 @@
 # B2_Mm2 status is defined using paired STAT1 ChIP-seq data
 
 # This script takes RepeatMasker output generated using Dfam v3.0 annotation
-# RepeatMasker output file available upon request
+# gzip'd intermediate bed file ("mm10_dfam.bed") available on repos
 
 # For convenience, ChIP-seq files are provided on repos
 # See "ChIPseq_BMDM" repos for how to generate these files
