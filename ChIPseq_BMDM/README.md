@@ -19,9 +19,9 @@ Repeat enrichment analysis:
 4. [giggle_bubbles.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_bubbles.py)
 
 Nearest neighbor analysis:
-1. get overlapping B2
-2. run bedtools closest
-3. plot histograms
+1. [get_overlapping_B2_nearest_neighbor](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_nearest_neighbor.sbatch)
+2. [bedtools_closest.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bedtools_closest.sbatch)
+3. [nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R), [nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R), [nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R)
 
 deepTools heatmap:
 1. get overlapping B2_Mm2 by STAT1/CTCF occupancy
