@@ -9,16 +9,17 @@ A typical ChIP-seq workflow to call peaks looks like this:
 4. [bwa.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bwa.sbatch)
 5. [remove_duplicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/remove_duplicates.sbatch)
 6. [macs2_piccolo.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_piccolo.sbatch), [macs2_platanitis.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_platanitis.sbatch), [macs2_cuartero.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_cuartero.sbatch), [macs2_gualdrini.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_gualdrini.sbatch)
-7. intersect peaks
-8. motif enrichment using XSTREME (supp table S2)
+7. [intersect_peak_replicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/intersect_peak_replicates.sbatch)
+8. [xstreme.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/xstreme.sbatch)
 
 Repeat enrichment analysis:
-1. GIGGLE (1A, supp table S4)
-2. Subset GIGGLE results
-3. GIGGLE bubble plot
-4. get overlapping B2_Mm2
-5. nearest neighbor (1B)
-6. deepTools heatmap (2A)
+1. [giggle_index.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_index.sbatch)
+2. [giggle_search](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_search.sbatch)
+3. [filter_giggle_results.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/filter_giggle_results.sh)
+4. [giggle_bubbles.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_bubbles.py)
+5. get overlapping B2_Mm2
+6. nearest neighbor (1B)
+7. deepTools heatmap (2A)
 
 Need following B2 overlap files:
 * Nearest neighbor w/ narrowPeaks (regardless of CTCF) - STAT1-bound B2_Mm2, shuffled STAT1-bound B2_Mm2, unbound B2_Mm2, unbound B2_Mm1a, unbound B2_Mm1t
@@ -40,9 +41,9 @@ Required packages:
 * Picard v2.6.0 ()
 * MACS v2.1.1 ()
 * bedtools v2.28.0 ()
-* XSTREME v5.4.1
+* XSTREME v5.4.1 ()
+* GIGGLE v0.6.3 ()
 * deepTools
-* GIGGLE
 
 Note that the soft masked mm10 assembly file may be downloaded via:
 * mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
