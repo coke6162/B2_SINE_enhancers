@@ -17,9 +17,15 @@ Repeat enrichment analysis:
 2. [giggle_search](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_search.sbatch)
 3. [filter_giggle_results.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/filter_giggle_results.sh)
 4. [giggle_bubbles.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_bubbles.py)
-5. get overlapping B2_Mm2
-6. nearest neighbor (1B)
-7. deepTools heatmap (2A)
+
+Nearest neighbor analysis:
+1. get overlapping B2
+2. run bedtools closest
+3. plot histograms
+
+deepTools heatmap:
+1. get overlapping B2_Mm2 by STAT1/CTCF occupancy
+2. deepTools heatmap
 
 Need following B2 overlap files:
 * Nearest neighbor w/ narrowPeaks (regardless of CTCF) - STAT1-bound B2_Mm2, shuffled STAT1-bound B2_Mm2, unbound B2_Mm2, unbound B2_Mm1a, unbound B2_Mm1t
@@ -36,14 +42,14 @@ Required packages:
 * BBMap v38.05 (https://jgi.doe.gov/data-and-tools/bbtools/)
 * FastQC v0.11.8 (https://github.com/s-andrews/FastQC)
 * MultiQC v1.7 (https://github.com/ewels/MultiQC)
-* BWA v0.7.15 ()
+* BWA v0.7.15 (https://github.com/lh3/bwa)
 * Samtools v1.10 (http://www.htslib.org/)
-* Picard v2.6.0 ()
-* MACS v2.1.1 ()
-* bedtools v2.28.0 ()
-* XSTREME v5.4.1 ()
-* GIGGLE v0.6.3 ()
-* deepTools
+* Picard v2.6.0 (https://broadinstitute.github.io/picard/)
+* MACS v2.1.1 (https://pypi.org/project/MACS2/)
+* bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
+* XSTREME v5.4.1 (https://meme-suite.org/meme/)
+* GIGGLE v0.6.3 (https://github.com/ryanlayer/giggle)
+* deepTools v3.5.1 (https://deeptools.readthedocs.io/en/develop/index.html)
 
 Note that the soft masked mm10 assembly file may be downloaded via:
 * mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
