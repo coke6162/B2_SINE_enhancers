@@ -2,7 +2,6 @@
 
 # Script for calling STAT1 peaks using data from Platanitis et al. 2019
 # STAT1 peaks are called relative to provided input using p-value cutoff of 0.01
-# Relaxed cutoff used because only peaks intersecting both replicates will be retained (see intersect_peak_replicates.sbatch)
 
 # Example usage:
 # sbatch macs2_platanitis.sbatch

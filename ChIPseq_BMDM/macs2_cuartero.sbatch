@@ -2,7 +2,6 @@
 
 # Script for calling RAD21 peaks using data from Cuartero et al. 2018
 # Peaks are called relative to provided input using p-value cutoff < 0.01
-# Relaxed cutoff used because only peaks intersecting both replicates will be retained (see intersect_peak_replicates.sbatch)
 
 # Example usage:
 # sbatch macs2_cuartero.sbatch

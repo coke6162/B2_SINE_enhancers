@@ -2,7 +2,6 @@
 
 # Script for calling CTCF peaks using data from Gualdrini et al. 2022
 # Peaks are called relative to provided input using p-value cutoff < 0.01
-# Relaxed cutoff used because only peaks intersecting both replicates will be retained (see intersect_peak_replicates.sbatch)
 
 # Note that peaks are not called relative to input
 # To our knowledge, input was not made available at the time of this analysis
