@@ -28,7 +28,6 @@ deepTools heatmap:
 2. deepTools heatmap
 
 Need following B2 overlap files:
-* Nearest neighbor w/ narrowPeaks (regardless of CTCF) - STAT1-bound B2_Mm2, shuffled STAT1-bound B2_Mm2, unbound B2_Mm2, unbound B2_Mm1a, unbound B2_Mm1t
 * deepTools heatmap - B2_Mm2 bound only by STAT1, B2_Mm2 bound only by CTCF, B2_Mm2 bound by CTCF and STAT1, randomly shuffled unbound B2_Mm2
 
 Bonus files:
