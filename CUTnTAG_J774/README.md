@@ -1,4 +1,4 @@
-A typical CUTnTag workflow might look like:
+A typical CUT&Tag workflow might look like:
 
 1. bbduk_PE.sbatch
 2. fastqc.sbatch
@@ -6,4 +6,4 @@ A typical CUTnTag workflow might look like:
 4. bwa_batch.sbatch
 5. MACS2.sbatch
 6. bdg_bw.sbatch
-7. calculate_FRIP_score.q
+7. calculate_FRIP_score.sbatch
