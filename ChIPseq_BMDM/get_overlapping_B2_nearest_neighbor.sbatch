@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script for identifying STAT1-bound B2_Mm2, shuffled B2_Mm2, and unbound B2_Mm2, B2_Mm1a, and B2_Mm1t
+# "mm10_dfam.bed" is available in gzip'd format in the "RNAseq_BMDM" repos
 # These files are meant to be used with "bedtools_closest.sbatch" and "nearest_neighbor_histograms.R"
 
 # Example usage:

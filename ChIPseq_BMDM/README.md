@@ -9,8 +9,9 @@ A typical ChIP-seq workflow to call peaks looks like this:
 4. [bwa.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bwa.sbatch)
 5. [remove_duplicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/remove_duplicates.sbatch)
 6. [macs2_piccolo.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_piccolo.sbatch), [macs2_platanitis.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_platanitis.sbatch), [macs2_cuartero.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_cuartero.sbatch), [macs2_gualdrini.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_gualdrini.sbatch)
-7. [intersect_peak_replicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/intersect_peak_replicates.sbatch)
-8. [xstreme.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/xstreme.sbatch)
+7. [bdg_to_bigwig.sbatch]()
+8. [intersect_peak_replicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/intersect_peak_replicates.sbatch)
+9. [xstreme.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/xstreme.sbatch)
 
 Repeat enrichment analysis:
 1. [giggle_index.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_index.sbatch)
@@ -23,12 +24,9 @@ Nearest neighbor analysis:
 2. [bedtools_closest_nearest_neighbor.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bedtools_closest_nearest_neighbor.sbatch)
 3. [nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R), [nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R), [nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R)
 
-deepTools heatmap:
-1. get overlapping B2_Mm2 by STAT1/CTCF occupancy
-2. deepTools heatmap
-
-Need following B2 overlap files:
-* deepTools heatmap - B2_Mm2 bound only by STAT1, B2_Mm2 bound only by CTCF, B2_Mm2 bound by CTCF and STAT1, randomly shuffled unbound B2_Mm2
+Visualize ChIP-seq signal over B2_Mm2 as a heatmap:
+1. [get_overlapping_B2_heatmap.sbatch]()
+2. [B2_Mm2_heatmap.sbatch]() - references motif bigwigs from motif repos
 
 Bonus files:
 * Overlap H3K27ac & STAT1 (referenced in text)
@@ -45,6 +43,7 @@ Required packages:
 * Samtools v1.10 (http://www.htslib.org/)
 * Picard v2.6.0 (https://broadinstitute.github.io/picard/)
 * MACS v2.1.1 (https://pypi.org/project/MACS2/)
+* bedGraphToBigWig v4 (http://hgdownload.soe.ucsc.edu/downloads.html#source_downloads)
 * bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
 * XSTREME v5.4.1 (https://meme-suite.org/meme/)
 * GIGGLE v0.6.3 (https://github.com/ryanlayer/giggle)

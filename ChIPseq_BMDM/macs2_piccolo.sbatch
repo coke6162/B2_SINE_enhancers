@@ -15,8 +15,8 @@
 
 # Job name and output
 #SBATCH -J macs2
-#SBATCH -o /Users/%u/slurmOut/slurm-%A_%a.out
-#SBATCH -e /Users/%u/slurmErr/slurm-%A_%a.err
+#SBATCH -o /Users/%u/slurmOut/slurm-%j.out
+#SBATCH -e /Users/%u/slurmErr/slurm-%j.err
 
 # Load MACS2
 module load python/2.7.14/MACS/2.1.1
