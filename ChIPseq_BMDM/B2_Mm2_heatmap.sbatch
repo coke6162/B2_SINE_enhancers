@@ -42,7 +42,7 @@ echo $(date +"[%b %d %H:%M:%S] Starting deeptools computeMatrix...")
 
 computeMatrix reference-point \
 --referencePoint center \
---scoreFileName picc_BMDM_WT_UT_H3K27ac.bw picc_BMDM_WT_IFNG_2h_H3K27ac.bw picc_BMDM_WT_UT_STAT1.bw picc_BMDM_WT_IFNG_2h_STAT1_R1.bw plat_BMDM_WT_UT_STAT1_R1.bw plat_BMDM_WT_IFNG_1.5h_STAT1_R1.bw gual_BMDM_shNT_UT_CTCF_R1.bw cuar_BMDM_WT_UT_RAD21_R1.bw GAS.bw CTCF.bw \
+--scoreFileName picc_BMDM_WT_UT_H3K27ac.bw picc_BMDM_WT_IFNG_2h_H3K27ac.bw picc_BMDM_WT_UT_STAT1.bw picc_BMDM_WT_IFNG_2h_STAT1_R1.bw plat_BMDM_WT_UT_STAT1_R1.bw plat_BMDM_WT_IFNG_1.5h_STAT1_R1.bw gual_BMDM_shNT_UT_CTCF_R1.bw cuar_BMDM_WT_UT_RAD21_R1.bw GAS_fimo_out.bw CTCF_fimo_out.bw \
 --regionsFileName ChIP_heatmap/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed ChIP_heatmap/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed ChIP_heatmap/B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed ChIP_heatmap/B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed \
 --beforeRegionStartLength 4000 --afterRegionStartLength 4000 \
 --binSize 10 --missingDataAsZero \
