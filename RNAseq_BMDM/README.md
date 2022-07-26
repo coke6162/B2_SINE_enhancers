@@ -37,3 +37,12 @@ For a list of all R packages used in this analysis, see session_info.txt.
 Note that the soft masked mm10 assembly and Gencode vM18 gene annotation file may be downloaded via:
 * mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
 * gencode.vM19.annotation.gtf - https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M19/gencode.vM19.annotation.gtf.gz
+
+The RepeatMasker output file for mm10 using Dfam 2.0 annotation may be downloaded via:
+* mm10.fa.out (referenced in scripts as mm10_dfam.out) - https://www.repeatmasker.org/genomes/mm10/RepeatMasker-rm406-dfam2.0/mm10.fa.out.gz
+
+Other files referenced in these scripts that have been provided through this repository:
+* [adapters.fa](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/adapters.fa)
+* [mm10_dfam.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/mm10_dfam.bed.gz)
+* [gencode_vM18_tss.bed]()
+* [B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed](), [B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed]()
