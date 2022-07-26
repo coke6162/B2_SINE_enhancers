@@ -7,8 +7,8 @@ A typical RNA-seq workflow to call differentially expressed genes looks like thi
 2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/fastqc.sbatch)
 3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/multiqc.sbatch)
 4. [hisat2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/hisat2.sbatch)
-5. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/featureCounts.sbatch) (references bam_order.txt)
-6. [DESeq2_genes.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_genes.R) (references gencode_vM18_crossref.txt and gencode_vM18_tss.bed)
+5. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/featureCounts.sbatch)
+6. [DESeq2_genes.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/DESeq2_genes.R)
 7. [extract_top_750_ISGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_ISGs.sh), [extract_top_750_IRGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_IRGs.sh), [extract_random_750_nonresponsive_genes.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_random_750_nonresponsive_genes.sh)
 8. [Dicer1_expression_bar.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/Dicer1_expression_bar.R)
 
@@ -43,6 +43,7 @@ The RepeatMasker output file for mm10 using Dfam 2.0 annotation may be downloade
 
 Other files referenced in these scripts that have been provided through this repository:
 * [adapters.fa](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/adapters.fa)
+* [bam_order.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/bam_order.txt)
 * [mm10_dfam.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/mm10_dfam.bed.gz)
 * [gencode_vM18_tss.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/gencode_vM18_tss.bed), [gencode_vM18_crossref.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/gencode_vM18_crossref.txt)
 * [B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed), [B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed)
