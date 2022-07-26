@@ -15,8 +15,8 @@
 
 # Job name and output
 #SBATCH -J xstreme
-#SBATCH -o /Users/%u/slurmOut/slurm-%A_%a.out
-#SBATCH -e /Users/%u/slurmErr/slurm-%A_%a.err
+#SBATCH -o /Users/%u/slurmOut/slurm-%j.out
+#SBATCH -e /Users/%u/slurmErr/slurm-%j.err
 
 # Load bedtools
 module load bedtools/2.28.0
