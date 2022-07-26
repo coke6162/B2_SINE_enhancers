@@ -65,7 +65,7 @@ bedtools intersect -a B2_Mm2.bed -b picc_BMDM_WT_IFNG_2h_STAT1_intersected.bed -
 bedtools intersect -a B2_Mm2.bed -b gual_BMDM_shNT_UT_CTCF_intersected.bed -u > ChIP_heatmap/B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected.bed
 
 # Randomly subset for 1000 control B2_Mm2 elements that do not overlap CTCF or STAT1
-bedtools intersect -a B2_Mm2.bed -b ChIP_heatmap/B2_Mm2*.bed -v | awk '{if ($1 != "chrY") print}' | shuf -n 1000 --random-source=<(get_seeded_random $seed) $REST | bedtools sort -i - > ChIP_heatmap/B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed
+bedtools intersect -a B2_Mm2.bed -b ChIP_heatmap/B2_Mm2*.bed -v | awk '{if ($1 != "chrY") print}' | shuf -n 1000 --random-source=<(get_seeded_random ${seed}) ${REST} | bedtools sort -i - > ChIP_heatmap/B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed
 
 # Identify B2_Mm2 elements bound ONLY by STAT1 (i.e. without CTCF)
 bedtools intersect -a ChIP_heatmap/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected.bed -b ChIP_heatmap/B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected.bed -v > ChIP_heatmap/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed
