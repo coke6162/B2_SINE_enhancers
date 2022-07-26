@@ -26,7 +26,7 @@ Nearest neighbor analysis:
 
 Visualize ChIP-seq signal over B2_Mm2 as a heatmap:
 1. [get_overlapping_B2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_heatmap.sbatch)
-2. [B2_Mm2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_heatmap.sbatch) - references motif bigwigs from motif repos
+2. [B2_Mm2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_heatmap.sbatch)
 
 Bonus files:
 * Overlap H3K27ac & STAT1 (referenced in text)
