@@ -9,7 +9,7 @@ A typical ChIP-seq workflow to call peaks looks like this:
 4. [bwa.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bwa.sbatch)
 5. [remove_duplicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/remove_duplicates.sbatch)
 6. [macs2_piccolo.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_piccolo.sbatch), [macs2_platanitis.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_platanitis.sbatch), [macs2_cuartero.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_cuartero.sbatch), [macs2_gualdrini.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/macs2_gualdrini.sbatch)
-7. [bdg_to_bigwig.sbatch]()
+7. [bdg_to_bigwig.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bdg_to_bigwig.sbatch)
 8. [intersect_peak_replicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/intersect_peak_replicates.sbatch)
 9. [xstreme.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/xstreme.sbatch)
 
@@ -25,8 +25,8 @@ Nearest neighbor analysis:
 3. [nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_4h_vs_UT.R), [nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_piccolo_IFNG_2h_vs_UT.R), [nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/nearest_neighbor_histograms_platanitis_IFNG_2h_vs_UT.R)
 
 Visualize ChIP-seq signal over B2_Mm2 as a heatmap:
-1. [get_overlapping_B2_heatmap.sbatch]()
-2. [B2_Mm2_heatmap.sbatch]() - references motif bigwigs from motif repos
+1. [get_overlapping_B2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_heatmap.sbatch)
+2. [B2_Mm2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_heatmap.sbatch) - references motif bigwigs from motif repos
 
 Bonus files:
 * Overlap H3K27ac & STAT1 (referenced in text)
@@ -51,3 +51,8 @@ Required packages:
 
 Note that the soft masked mm10 assembly file may be downloaded via:
 * mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
+
+Other files referenced in these scripts that have been provided through this repository:
+* [adapters.fa]()
+* [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed](), [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed](), [B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed](), [B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed]()
+* [mm10_dfam.bed.gz]()
