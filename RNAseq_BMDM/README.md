@@ -44,5 +44,5 @@ The RepeatMasker output file for mm10 using Dfam 2.0 annotation may be downloade
 Other files referenced in these scripts that have been provided through this repository:
 * [adapters.fa](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/adapters.fa)
 * [mm10_dfam.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/mm10_dfam.bed.gz)
-* [gencode_vM18_tss.bed]()
-* [B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed](), [B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed]()
+* [gencode_vM18_tss.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/gencode_vM18_tss.bed), [gencode_vM18_crossref.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/gencode_vM18_crossref.txt)
+* [B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/B2_Mm2_piccolo_IFNG_2h_STAT1_intersected.bed), [B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/B2_Mm2_platanitis_IFNG_1.5h_STAT1_intersected.bed)
