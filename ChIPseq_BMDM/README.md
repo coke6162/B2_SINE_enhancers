@@ -53,6 +53,6 @@ Note that the soft masked mm10 assembly file may be downloaded via:
 * mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
 
 Other files referenced in these scripts that have been provided through this repository:
-* [adapters.fa]()
-* [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed](), [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed](), [B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed](), [B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed]()
-* [mm10_dfam.bed.gz]()
+* [adapters.fa](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/adapters.fa)
+* [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed), [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed), [B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed), [B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed)
+* [mm10_dfam.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/mm10_dfam.bed.gz)
