@@ -22,7 +22,7 @@ The RepeatMasker output file for mm10 using Dfam 2.0 annotation may be downloade
 * mm10.fa.out (referenced in scripts as mm10_dfam.out) - https://www.repeatmasker.org/genomes/mm10/RepeatMasker-rm406-dfam2.0/mm10.fa.out.gz
 
 Other files referenced in these scripts that have been provided through this repository:
-* [MA0137.3.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0137.3.meme), [MA0139.1.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0139.1.meme)
+* [MA0137.3.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0137.3.meme), [MA0139.1.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0139.1.meme), [MA0517.1.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0517.1.meme)
 * [B2_Mm2_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm2_expanded.bed.gz), [B2_Mm1a_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1a_expanded.bed.gz), [B2_Mm1t_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1t_expanded.bed.gz)
 * [repeats_turnRMFile_to_UCSC.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/repeats_turnRMFile_to_UCSC.py)
 * [createExpandedRepeatFile.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/createExpandedRepeatFile.py)
