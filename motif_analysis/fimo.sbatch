@@ -25,6 +25,7 @@ pwd; hostname; date
 echo $(date +"[%b %d %H:%M:%S] Running FIMO...")
 
 fimo --text --parse-genomic-coord --thresh 1e-4 MA0137.3.meme mm10.fa > GAS_fimo_out.txt
+fimo --text --parse-genomic-coord --thresh 1e-4 MA0517.1.meme mm10.fa > ISRE_fimo_out.txt
 fimo --text --parse-genomic-coord --thresh 1e-4 MA0139.1.meme mm10.fa > CTCF_fimo_out.txt
 
 echo $(date +"[%b %d %H:%M:%S] Done")
