@@ -26,4 +26,3 @@ Other files referenced in these scripts that have been provided through this rep
 * [B2_Mm2_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm2_expanded.bed.gz), [B2_Mm1a_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1a_expanded.bed.gz), [B2_Mm1t_expanded.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1t_expanded.bed.gz)
 * [repeats_turnRMFile_to_UCSC.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/repeats_turnRMFile_to_UCSC.py)
 * [createExpandedRepeatFile.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/createExpandedRepeatFile.py)
-* [fimo_analysis.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/fimo_analysis.py)
