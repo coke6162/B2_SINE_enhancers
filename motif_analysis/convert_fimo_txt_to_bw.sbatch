@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Script for converting FIMO txt output to bigWig format
-# fimo_analysis.py utility script available through this repos
 
 # Example usage:
 # sbatch convert_fimo_txt_to_bw.sbatch
@@ -29,8 +28,8 @@ pwd; hostname; date
 
 echo $(date +"[%b %d %H:%M:%S] Convert fimo output to bed format...")
 
-/opt/python/2.7.14/bin/python2.7 fimo_analysis.py -i GAS_fimo_out.txt -o ./
-/opt/python/2.7.14/bin/python2.7 fimo_analysis.py -i CTCF_fimo_out.txt -o ./
+awk '(NR>1){print $3 "\t" $4 "\t" $5 "\t" $1 "\t" $8 "\t" $6}' GAS_fimo_out.txt | bedtools sort -i - > GAS_fimo_out.bed
+awk '(NR>1){print $3 "\t" $4 "\t" $5 "\t" $1 "\t" $8 "\t" $6}' CTCF_fimo_out.txt | bedtools sort -i - > CTCF_fimo_out.bed
 
 # Create a bedgraph from the bed output
 echo $(date +"[%b %d %H:%M:%S] Create a bedgraph from bed output...")
