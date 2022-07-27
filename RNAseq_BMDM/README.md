@@ -12,6 +12,10 @@ A typical RNA-seq workflow to call differentially expressed genes looks like thi
 7. [extract_top_750_ISGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_ISGs.sh), [extract_top_750_IRGs.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_top_750_IRGs.sh), [extract_random_750_nonresponsive_genes.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/extract_random_750_nonresponsive_genes.sh)
 8. [Dicer1_expression_bar.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/Dicer1_expression_bar.R)
 
+For gene ontology analysis, we subset for interferon-stimulated genes (ISGs) using the following thresholds prior to running gProfiler: FDR < 0.05, log2FC > 1. 
+
+To identify a list of STAT1-bound B2_Mm2 elements (see ChIPseq_BMDM repos) as a function of distance to the nearest ISG, we subset for ISGs using the following thresholds: FDR < 0.05, log2FC > 0.5.
+
 A typical RNA-seq workflow to call differentially expressed TE families looks like this:
 1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/bbduk.sbatch)
 2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/fastqc.sbatch)
