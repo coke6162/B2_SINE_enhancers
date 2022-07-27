@@ -86,6 +86,7 @@ We then identified a subset of B2 SINE elements that are bound by STAT1 in IFNG-
 2. [giggle_search](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_search.sbatch)
 3. [filter_giggle_results.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/filter_giggle_results.sh)
 4. [giggle_bubbles.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_bubbles.py)
+5. [overlap_TEs_STAT1_summits.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/overlap_TEs_STAT1_summits.sbatch)
 
 **Nearest neighbor analysis:**
 1. [get_overlapping_B2_nearest_neighbor.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_nearest_neighbor.sbatch)
@@ -95,6 +96,12 @@ We then identified a subset of B2 SINE elements that are bound by STAT1 in IFNG-
 **Visualize ChIP-seq signal over B2_Mm2 as a heatmap:**
 1. [get_overlapping_B2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_heatmap.sbatch)
 2. [B2_Mm2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_heatmap.sbatch)
+
+Assess distribution of p-values for predicted GAS motifs that overlap B2 SINE elements as a box-and-whisker plot:
+1. [get_overlapping_B2_box_whisker.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_box_whisker.sbatch)
+2. [fimo_pval_1.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/fimo_pval_1.sbatch)
+3. [get_fimo_pval_box_whisker.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_fimo_pval_box_whisker.sbatch)
+4. [B2_GAS_whisker.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_GAS_whisker.R)
 
 #### 3. Assess STAT1 and CTCF binding over B2 SINE subfamilies
 
