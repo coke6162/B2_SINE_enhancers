@@ -18,6 +18,7 @@ Repeat enrichment analysis:
 2. [giggle_search](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_search.sbatch)
 3. [filter_giggle_results.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/filter_giggle_results.sh)
 4. [giggle_bubbles.py](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/giggle_bubbles.py)
+5. [overlap_TEs_STAT1_summits.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/overlap_TEs_STAT1_summits.sbatch)
 
 Nearest neighbor analysis:
 1. [get_overlapping_B2_nearest_neighbor.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_nearest_neighbor.sbatch)
@@ -28,11 +29,13 @@ Visualize ChIP-seq signal over B2_Mm2 as a heatmap:
 1. [get_overlapping_B2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_heatmap.sbatch)
 2. [B2_Mm2_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_heatmap.sbatch)
 
+Assess distribution of p-values for predicted GAS motifs that overlap B2 SINE elements as a box-and-whisker plot:
+1. [get_overlapping_B2_box_whisker.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_overlapping_B2_box_whisker.sbatch)
+2. [fimo_pval_1.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/fimo_pval_1.sbatch)
+3. [get_fimo_pval_box_whisker.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_fimo_pval_box_whisker.sbatch)
+4. [B2_GAS_whisker.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_GAS_whisker.R)
+
 Bonus files:
-* Overlap H3K27ac & STAT1 (referenced in text)
-* Overlap all TEs with STAT1 summits & motifs (supp table S3)
-* Nearest neighbor repeat, using log2FC cutoff of > 0.5 (supp table S5)
-* Box-and-whisker (supp figure S5)
 * Differential AME analysis (supp table S6) - to be removed?
 
 Required packages:
@@ -57,3 +60,4 @@ Other files referenced in these scripts that have been provided through this rep
 * [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_only.bed), [B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_picc_BMDM_WT_IFNG_2h_STAT1_intersected_and_CTCF.bed), [B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_gual_BMDM_shNT_UT_CTCF_intersected_only.bed), [B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_Mm2_control_no_STAT1_or_CTCF_shuf1000.bed)
 * [mm10_dfam.bed.gz](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/mm10_dfam.bed.gz)
 * [sort_bed.sh](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/sort_bed.sh)
+* [MA0137.3.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/MA0137.3.meme)
