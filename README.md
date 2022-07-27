@@ -14,8 +14,10 @@ List of publicly available data used in this study:
 * [Cuartero, S., Weiss, F.D., Dharmalingam, G. et al. Control of inducible gene expression links cohesin to hematopoietic progenitor self-renewal and differentiation. Nat Immunol 19, 932–941 (2018).](https://www.nature.com/articles/s41590-018-0184-1) RAD21 ChIP-seq (SRR6492207)
 * [Gualdrini, F., Polletti, S., Simonatto, M., et al. H3K9 trimethylation in active chromatin restricts the usage of functional CTCF sites in SINE B2 repeats. Genes Dev 36, 414-432 (2022)](http://genesdev.cshlp.org/content/early/2022/03/30/gad.349282.121) CTCF ChIP-seq (SRR17090500, SRR17090494)
 
-## UCSC Genome Browser Session:
+For all accessions, refer to "sample_names.txt" file in the "RNAseq_BMDM" and "ChIPseq_BMDM" repositories.
 
+## UCSC Genome Browser Session:
+bigWig files for all samples analyzed in this study may be visualized on the UCSC Genome Browser [here](https://genome.ucsc.edu/s/coke6162/B2_SINE_enhancers).
 
 ## Programs used:
 List of programs used for all analyses:
@@ -109,22 +111,24 @@ We identified putative STAT1 and CTCF binding sites for the mm10 mouse genome as
 We generated J774A.1 clones harboring a deletion for a B2_Mm2 element intronic to the *Dicer1* gene. Changes in gene expression were quantified using qPCR (see [qPCR_bargraph.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/qPCR_bargraph.R)) and RNA-seq. 
 
 **Mutant J774A.1 RNA-seq Workflow:**
-1. [bbduk_PE.sbatch]()
-2. [fastqcreport.sbatch]()
-3. [multiqc.sbatch]()
-4. [hisat2_PE.sbatch]()
-5. [merge_bams.sbatch]()
-6. [bamTobw.sbatch]()
-7. [featureCounts.sbatch]()
-8. [deseq2.R]()
+1. [bbduk_PE.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/bbduk_PE.sbatch)
+2. [fastqcreport.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/fastqcreport.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/multiqc.sbatch)
+4. [hisat2_PE.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/hisat2_PE.sbatch)
+5. [merge_bams.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/merge_bams.sbatch)
+6. [bamTobw.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/bamTobw.sbatch)
+7. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/fastqcreport.sbatch)
+8. [deseq2.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/deseq2.R)
+9. [distance_plots.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/distance_plots.R)
+10. [normalized_CPM_plots.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/normalized_CPM_plots.R)
 
 We additionally performed CUT&TAG (H3K27ac, STAT1, POLR2A) on wild-type J774A.1 cells and J774A.1 cells harboring a deletion for B2_Mm2.Dicer1. 
 
 **CUT&TAG Workflow:**
-1. [bbduk_PE.sbatch]()
-2. [fastqc.sbatch]()
-3. [multiqc.sbatch]()
-4. [bwa_batch.sbatch]()
-5. [MACS2.sbatch]()
-6. [bdg_bw.sbatch]()
-7. [calculate_FRIP_score.sbatch]()
+1. [bbduk_PE.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/bbduk_PE.sbatch)
+2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/fastqc.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/multiqc.sbatch)
+4. [bwa_batch.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/bwa_batch.sbatch)
+5. [MACS2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/MACS2.sbatch)
+6. [bdg_bw.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/bdg_bw.sbatch)
+7. [calculate_FRIP_score.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/CUTnTAG_J774/calculate_FRIP_score.sbatch)
