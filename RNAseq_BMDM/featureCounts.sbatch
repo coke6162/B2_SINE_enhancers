@@ -32,7 +32,7 @@ echo "Starting featureCounts gene-level summarization..."
 
 featureCounts \
 -T ${numThreads} \
--p -O -s 2 -t exon -g gene_id \
+-p -O -s 0 -t exon -g gene_id \
 -a gencode.vM18.annotation.gtf \
 -o raw_gene_counts.txt \
 $(cat bam_order.txt)
