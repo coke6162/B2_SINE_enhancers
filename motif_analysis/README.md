@@ -11,7 +11,7 @@ Workflow:
 Required packages:
 * FIMO v5.4.1 (https://meme-suite.org/meme/)
 * bedtools v2.28.0 (http://bedtools.readthedocs.io/en/latest/)
-* Samtools v1.10 (http://www.htslib.org/)
+* Samtools v1.14 (http://www.htslib.org/)
 * bedGraphToBigWig v4 (http://hgdownload.soe.ucsc.edu/downloads.html#source_downloads)
 * deepTools v3.5.1 (https://deeptools.readthedocs.io/en/develop/index.html)
 

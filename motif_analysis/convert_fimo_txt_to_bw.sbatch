@@ -19,9 +19,7 @@
 
 # Load modules
 module purge
-module load python/2.7.14/numpy/1.14.1
-module load bedtools/2.28.0
-module load samtools/1.10
+module load python/2.7.14/numpy/1.14.1 bedtools/2.28.0 samtools/1.14
 
 # Convert FIMO txt output to bed
 pwd; hostname; date
