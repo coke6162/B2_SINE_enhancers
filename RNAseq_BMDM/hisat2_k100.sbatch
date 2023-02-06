@@ -38,12 +38,12 @@ echo $(date +"[%b %d %H:%M:%S] Aligning trimmed fastq with hisat2...")
 
 hisat2 \
 -k 100 -p ${numThreads} --no-softclip \
--x ${hisatIndexDir}/${hisatIndex} \
--U ${inDir}/${queries[$SLURM_ARRAY_TASK_ID]} \
+-x index/mm10 \
+-U ${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
 | samtools view -Sb - \
-| samtools sort -@ ${numThreads} - -o ${outDir}/${queries[$SLURM_ARRAY_TASK_ID]%.fastq.gz}_k100.sorted.bam
+| samtools sort -@ ${numThreads} - -o ${queries[$SLURM_ARRAY_TASK_ID]}_k100.sorted.bam
 
 # Index filtered bam
-samtools index ${outDir}/${queries[$SLURM_ARRAY_TASK_ID]}.sorted.bam
+samtools index ${queries[$SLURM_ARRAY_TASK_ID]}.sorted.bam
 
 echo $(date +"[%b %d %H:%M:%S] Done")

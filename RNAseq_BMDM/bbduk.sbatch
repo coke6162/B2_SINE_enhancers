@@ -37,8 +37,8 @@ echo "Processing file: "${queries[$SLURM_ARRAY_TASK_ID]}
 echo $(date +"[%b %d %H:%M:%S] Running bbduk...")
 
 bbduk.sh -Xmx4g \
-in=${inDir}/${queries[$SLURM_ARRAY_TASK_ID]}.fastq.gz \
-out=${outDir}/${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
+in=${queries[$SLURM_ARRAY_TASK_ID]}.fastq.gz \
+out=${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
 ref=adapters.fa \
 ktrim=r k=34 mink=11 hdist=1 tpe tbo \
 qtrim=r trimq=10 \

@@ -39,11 +39,11 @@ hisat2 \
 -p ${numThreads} \
 --no-softclip \
 -x index/mm10 \
--U ${inDir}/${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
+-U /${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
 | samtools view -q 10 -Sb - \
-| samtools sort -@ ${numThreads} - -o ${outDir}/${queries[$SLURM_ARRAY_TASK_ID]}.sorted.uniq.bam
+| samtools sort -@ ${numThreads} - -o ${queries[$SLURM_ARRAY_TASK_ID]}.sorted.uniq.bam
 
 # Index filtered bam
-samtools index ${outDir}/${queries[$SLURM_ARRAY_TASK_ID]}.sorted.uniq.bam
+samtools index ${queries[$SLURM_ARRAY_TASK_ID]}.sorted.uniq.bam
 
 echo $(date +"[%b %d %H:%M:%S] Done")
