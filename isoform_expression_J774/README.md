@@ -5,11 +5,11 @@ These scripts require the following files as input:
 * Aligned fragments from the [J774 WT & B2_Mm2.Dicer1 KO RNA-seq analysis](https://github.com/coke6162/B2_SINE_enhancers/tree/main/RNAseq_J774)
 
 Workflow:
-1. [stringtie_assemble.sbatch]()
-2. [stringtie_merge.sbatch](), [gtf_list.txt]()
-3. [salmon_index_decoy.sbatch](), [decoys.txt]
-4. [salmon_quant.sbatch]()
-5. [DESeq2.R](), [sample_names.txt]()
+1. [stringtie_assemble.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_assemble.sbatch)
+2. [stringtie_merge.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_merge.sbatch), [gtf_list.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/gtf_list.txt)
+3. [salmon_index_decoy.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/salmon_index_decoy.sbatch), [decoys.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/decoys.txt)
+4. [salmon_quant.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/salmon_quant.sbatch)
+5. [DESeq2.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/DESeq2.R), [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/sample_names.txt)
 
 Required packages:
 * BBMap v38.05 (https://jgi.doe.gov/data-and-tools/bbtools/)
