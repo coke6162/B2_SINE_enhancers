@@ -1,8 +1,4 @@
-# B2_SINE_enhancers
-WORK IN PROGRESS
-
-## Scripts and files used in study:
-
+# Co-option of B2 SINE elements as interferon-inducible enhancers in mouse
 
 ## Data availability:
 All raw and processed sequencing data generated in this study have been submitted to the NCBI Gene Expression Omnibus (GEO) with accession number [GSE202574](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202574).
@@ -116,7 +112,32 @@ We identified putative STAT1 and CTCF binding sites for the mm10 mouse genome as
 3. [run_createExpandedRepeatFile.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/run_createExpandedRepeatFile.sbatch)
 4. [B2_Mm2_motif_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm2_motif_heatmap.sbatch), [B2_Mm1a_motif_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1a_motif_heatmap.sbatch), [B2_Mm1t_motif_heatmap.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/B2_Mm1t_motif_heatmap.sbatch)
 
-#### 4. CRISPR-mediated deletion of B2_Mm2.Dicer1
+#### 4. Predict enhancer-gene contacts using the Activity-by-Contact Model
+
+We reanalyzed publicly available ATAC-seq and Hi-C data from IFNG-stimulated murine BMDMs and subsequently ran the Activity-by-Contact Model with H3K27ac ChIP-seq and RNA-seq generated from previous analyses to predict enhancer-gene contacts.
+
+**ATAC-seq Workflow:**
+1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/bbduk.sbatch)
+2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/fastqc.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/multiqc.sbatch)
+4. [bowtie2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/bowtie2.sbatch)
+5. [remove_duplicates.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/remove_duplicates.sbatch)
+6. [shift_fragments.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/shift_fragments.sbatch)
+7. [macs2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/macs2.sbatch)
+
+**Hi-C Workflow:**
+
+**ABC Workflow:**
+
+#### 5. Comparative analysis assessing regulatory contibutions of B2_Mm2 on innate immunity in mouse
+
+description
+
+**Human RNA-seq Analysis Workflow:**
+
+**Orthology Analysis:**
+
+#### 6. CRISPR-mediated deletion of B2_Mm2.Dicer1
 
 We generated J774A.1 clones harboring a deletion for a B2_Mm2 element intronic to the *Dicer1* gene. Changes in gene expression were quantified using qPCR (see [qPCR_bargraph.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/qPCR_bargraph.R)) and RNA-seq. 
 
@@ -134,7 +155,7 @@ We generated J774A.1 clones harboring a deletion for a B2_Mm2 element intronic t
 
 To assess whether deletion of the B2_Mm2 element changes relative isoform abundances, we ran Stringtie to assemble novel transcripts and subsequently performed differential expression analysis at the transcript level.
 
-**Isoform Expression Workflow**
+**Isoform Expression Workflow:**
 1. [stringtie_assemble.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_assemble.sbatch)
 2. [stringtie_merge.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_merge.sbatch), [gtf_list.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/gtf_list.txt)
 3. [salmon_index_decoy.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/salmon_index_decoy.sbatch), [decoys.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/decoys.txt)
