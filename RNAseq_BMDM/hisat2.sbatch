@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script for aligning trimmed reads to the reference genome using hisat2
-# hisat2 index located in a subdirectory named "index" (not supplied)
+# hisat2 index located in a subdirectory named "index/hisat2" (not supplied)
 # all hisat2 index files share the same "mm10" prefix
 
 # Example usage:
@@ -23,7 +23,7 @@
 numThreads=4
 
 # Load hisat2 and samtools
-module load hisat2/2.1.0 samtools/1.10
+module load hisat2/2.1.0 samtools/1.14
 
 # Define query files
 # Removes suffix to generate a unique identifier for each pair of files
@@ -38,7 +38,7 @@ echo $(date +"[%b %d %H:%M:%S] Aligning trimmed fastq with hisat2 and filtering 
 hisat2 \
 -p ${numThreads} \
 --no-softclip \
--x index/mm10 \
+-x index/hisat2/mm10 \
 -U /${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
 | samtools view -q 10 -Sb - \
 | samtools sort -@ ${numThreads} - -o ${queries[$SLURM_ARRAY_TASK_ID]}.sorted.uniq.bam

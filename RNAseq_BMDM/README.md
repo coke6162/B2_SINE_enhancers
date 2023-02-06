@@ -31,7 +31,7 @@ Required packages:
 * FastQC v0.11.8 (https://github.com/s-andrews/FastQC)
 * MultiQC v1.7 (https://github.com/ewels/MultiQC)
 * HISAT2 v2.1.0 (https://github.com/DaehwanKimLab/hisat2)
-* Samtools v1.10 (http://www.htslib.org/)
+* Samtools v1.14 (http://www.htslib.org/)
 * Subread v1.6.2 (http://subread.sourceforge.net/)
 * DESeq2 v1.26.0 (https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
 * TEtranscripts v2.1.4 (https://github.com/mhammell-laboratory/TEtranscripts)
