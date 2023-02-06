@@ -2,7 +2,7 @@ All bash scripts were written to be run using SLURM on the HPC cluster at the Un
 
 Accession numbers and corresponding sample names are provided in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/sample_names.txt). These scripts assume that all samples are named as described in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/sample_names.txt). Samples may be download from SRA using the provided SRR IDs using sra-tools (script not provided). For simplicity all input and output files are written to the same directory.
 
-The purpose of this analysis is to generate alignment and peak files using ATAC-seq data from IFNG-stimulated BMDMs [Platanitis et al. iScience 2022](https://doi.org/10.1016/j.isci.2022.103840). These files will be used in conjunction with H3K27ac ChIP, Hi-C, and RNA-seq data from IFNG-stimulated BMDMs to predict enhancer-gene contacts using the Activity by Contact model. 
+The purpose of this analysis is to generate alignment and peak files using ATAC-seq data from IFNG-stimulated BMDMs ([Platanitis et al. iScience 2022](https://doi.org/10.1016/j.isci.2022.103840)). These files will be used in conjunction with H3K27ac ChIP, Hi-C, and RNA-seq data from IFNG-stimulated BMDMs to predict enhancer-gene contacts using the Activity by Contact model. 
 
 A typical RNA-seq workflow to call differentially expressed genes looks like this:
 1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/bbduk.sbatch)
