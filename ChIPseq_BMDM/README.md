@@ -36,14 +36,14 @@ Assess distribution of p-values for predicted GAS motifs that overlap B2 SINE el
 4. [B2_GAS_whisker.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_GAS_whisker.R)
 
 Bonus files:
-* Differential AME analysis (supp table S6) - to be removed?
+* Differential AME analysis
 
 Required packages:
 * BBMap v38.05 (https://jgi.doe.gov/data-and-tools/bbtools/)
 * FastQC v0.11.8 (https://github.com/s-andrews/FastQC)
 * MultiQC v1.7 (https://github.com/ewels/MultiQC)
 * BWA v0.7.15 (https://github.com/lh3/bwa)
-* Samtools v1.10 (http://www.htslib.org/)
+* Samtools v1.14 (http://www.htslib.org/)
 * Picard v2.6.0 (https://broadinstitute.github.io/picard/)
 * MACS v2.1.1 (https://pypi.org/project/MACS2/)
 * bedGraphToBigWig v4 (http://hgdownload.soe.ucsc.edu/downloads.html#source_downloads)

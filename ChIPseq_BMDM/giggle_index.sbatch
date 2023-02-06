@@ -19,7 +19,7 @@
 #SBATCH -e /Users/%u/slurmErr/slurm-%j.err
 
 # Load modules
-module load samtools/1.10
+module load samtools/1.14
 
 # Make directories for GIGGLE index
 pwd; hostname; date

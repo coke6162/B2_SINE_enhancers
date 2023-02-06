@@ -22,7 +22,7 @@ queries=($(ls *_treat_pileup.bdg | xargs -n 1 basename | sed 's/_treat_pileup.bd
 
 # Load modules
 module purge
-module load samtools/1.10
+module load samtools/1.14
 
 # Sort bedgraph
 pwd; hostname; date

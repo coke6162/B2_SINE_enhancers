@@ -20,7 +20,7 @@
 #SBATCH -e /Users/%u/slurmErr/slurm-%j.err
 
 # Load bedtools
-module load bedtools/2.28.0
+module load bedtools/2.28.0 samtools/1.14
 
 # Extract B2 coordinates
 grep "B2_Mm2" mm10_dfam.bed > B2_Mm2.bed

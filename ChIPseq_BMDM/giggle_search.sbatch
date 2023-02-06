@@ -18,7 +18,7 @@
 #SBATCH -e /Users/%u/slurmErr/slurm-%j.err
 
 # load modules
-module load samtools/1.10
+module load samtools/1.14
 
 # Make a temporary directory
 pwd; hostname; date

@@ -20,6 +20,9 @@
 # Set constant variables
 numThreads=1
 
+# Load modules
+module load samtools/1.14
+
 # Define path variables
 tmpDir=java_tmp/${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}
 

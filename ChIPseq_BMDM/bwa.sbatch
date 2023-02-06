@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script for aligning trimmed, single-end reads to the reference genome using bwa mem
-# bwa index located in a subdirectory named "index" (not supplied)
+# bwa index located in a subdirectory named "index/bwa" (not supplied)
 # all bwa index files share the same "mm10" prefix
 
 # Example usage:
@@ -23,7 +23,7 @@
 numThreads=4
 
 # Load modules
-module load bwa/0.7.15 samtools/1.8
+module load bwa/0.7.15 samtools/1.14
 
 # Define query files
 queries=($(ls *_trimmed.fastq.gz | xargs -n 1 basename | sed 's/_trimmed.fastq.gz//'))
@@ -44,7 +44,7 @@ echo $(date +"[%b %d %H:%M:%S] Aligning to assembly...")
 
 bwa mem \
 -t ${numThreads} \
-index/mm10 \
+index/bwa/mm10 \
 ${queries[$SLURM_ARRAY_TASK_ID]}_trimmed.fastq.gz \
 | samtools view -@ ${numThreads} -Sb -q 10 -F 4 \
 | samtools sort -@ ${numThreads} -T ${tmpDir} \
