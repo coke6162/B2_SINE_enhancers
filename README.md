@@ -9,15 +9,14 @@ All raw and processed sequencing data generated in this study have been submitte
 
 ## Publicly available data used:
 List of publicly available data used in this study:
-* [Piccolo, V., Curina, A., Genua, M. et al. Opposing macrophage polarization programs show extensive epigenomic and transcriptional cross-talk. Nat Immunol 18, 530–540 (2017).](https://www.nature.com/articles/ni.3710) RNA-seq & ChIP-seq (GSE84520)
-* [Platanitis, E., Demiroz, D., Schneller, A. et al. A molecular switch from STAT2-IRF9 to ISGF3 underlies interferon-induced gene transcription. Nat Commun 10, 2921 (2019).](https://www.nature.com/articles/s41467-019-10970-y) RNA-seq & ChIP-seq (GSE115435)
-* [Cuartero, S., Weiss, F.D., Dharmalingam, G. et al. Control of inducible gene expression links cohesin to hematopoietic progenitor self-renewal and differentiation. Nat Immunol 19, 932–941 (2018).](https://www.nature.com/articles/s41590-018-0184-1) RAD21 ChIP-seq (SRR6492207)
-* [Gualdrini, F., Polletti, S., Simonatto, M., et al. H3K9 trimethylation in active chromatin restricts the usage of functional CTCF sites in SINE B2 repeats. Genes Dev 36, 414-432 (2022)](http://genesdev.cshlp.org/content/early/2022/03/30/gad.349282.121) CTCF ChIP-seq (SRR17090500, SRR17090494)
-
-For all accessions, refer to "sample_names.txt" file in the "RNAseq_BMDM" and "ChIPseq_BMDM" repositories.
+* [Piccolo, V., Curina, A., Genua, M. et al. Opposing macrophage polarization programs show extensive epigenomic and transcriptional cross-talk. Nat Immunol 18(5), 530–540 (2017).](https://doi.org/10.1038/ni.3710) RNA-seq & ChIP-seq (GSE84520)
+* [Platanitis, E., Demiroz, D., Schneller, A. et al. A molecular switch from STAT2-IRF9 to ISGF3 underlies interferon-induced gene transcription. Nat Commun 10(1), 2921 (2019).](https://doi.org/10.1038/s41590-018-0184-1) RNA-seq & ChIP-seq (GSE115435)
+* [Cuartero, S., Weiss, F.D., Dharmalingam, G. et al. Control of inducible gene expression links cohesin to hematopoietic progenitor self-renewal and differentiation. Nat Immunol 19(9), 932–941 (2018).](https://www.nature.com/articles/s41590-018-0184-1) RAD21 ChIP-seq (SRR6492207)
+* [Gualdrini, F., Polletti, S., Simonatto, M., et al. H3K9 trimethylation in active chromatin restricts the usage of functional CTCF sites in SINE B2 repeats. Genes Dev 36(7-8), 414-432 (2022).](https://doi.org/10.1101%2Fgad.349282.121) CTCF ChIP-seq (SRR17090500, SRR17090494)
+* [Platanitis, E., Gruener, S., Ravi Sundar Jose Geetha, A., et al. Interferons reshape the 3D conformation and accessibility of macrophage chromatin. iScience 25(3), (2022).](https://doi.org/10.1016/j.isci.2022.103840) ATAC-seq and Hi-C (PRJNA694816)
 
 ## UCSC Genome Browser Session:
-bigWig files for all samples analyzed in this study may be visualized on the UCSC Genome Browser [here](https://genome.ucsc.edu/s/coke6162/B2_SINE_enhancers).
+bigWig files for all samples analyzed in this study may be visualized on the UCSC Genome Browser [here](https://genome.ucsc.edu/s/coke6162/B2_SINE_enhancers_Horton_et_al).
 
 ## Programs used:
 List of programs used for all analyses:
@@ -25,7 +24,7 @@ List of programs used for all analyses:
 * FastQC v0.11.8 (https://github.com/s-andrews/FastQC)
 * MultiQC v1.7 (https://github.com/ewels/MultiQC)
 * HISAT2 v2.1.0 (https://github.com/DaehwanKimLab/hisat2)
-* Samtools v1.10 (http://www.htslib.org/)
+* Samtools v1.14 (http://www.htslib.org/)
 * Subread v1.6.2 (http://subread.sourceforge.net/)
 * DESeq2 v1.26.0 (https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
 * TEtranscripts v2.1.4 (https://github.com/mhammell-laboratory/TEtranscripts)
@@ -39,6 +38,10 @@ List of programs used for all analyses:
 * GIGGLE v0.6.3 (https://github.com/ryanlayer/giggle)
 * FIMO v5.4.1 (https://meme-suite.org/meme/)
 * bedGraphToBigWig v4 (http://hgdownload.soe.ucsc.edu/downloads.html#source_downloads)
+* Bowtie2 v2.2.9 (https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
+* Cufflinks v2.2.1 (http://cole-trapnell-lab.github.io/cufflinks/)
+* Stringtie v1.3.3b (https://ccb.jhu.edu/software/stringtie/)
+* Salmon v1.9.0 (https://combine-lab.github.io/salmon/)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
 ChIP-seq and RNA-seq data in murine primary bone marrow derived macrophages (BMDMs) were downloaded from publicly available datasets and processed as described below. All data were aligned to mm10. 
@@ -128,6 +131,15 @@ We generated J774A.1 clones harboring a deletion for a B2_Mm2 element intronic t
 8. [deseq2.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/deseq2.R)
 9. [distance_plots.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/distance_plots.R)
 10. [normalized_CPM_plots.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_J774/normalized_CPM_plots.R)
+
+To assess whether deletion of the B2_Mm2 element changes relative isoform abundances, we ran Stringtie to assemble novel transcripts and subsequently performed differential expression analysis at the transcript level.
+
+**Isoform Expression Workflow**
+1. [stringtie_assemble.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_assemble.sbatch)
+2. [stringtie_merge.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/stringtie_merge.sbatch), [gtf_list.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/gtf_list.txt)
+3. [salmon_index_decoy.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/salmon_index_decoy.sbatch), [decoys.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/decoys.txt)
+4. [salmon_quant.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/salmon_quant.sbatch)
+5. [DESeq2.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/DESeq2.R), [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/isoform_expression_J774/sample_names.txt)
 
 We additionally performed CUT&TAG (H3K27ac, STAT1, POLR2A) on wild-type J774A.1 cells and J774A.1 cells harboring a deletion for B2_Mm2.Dicer1. 
 

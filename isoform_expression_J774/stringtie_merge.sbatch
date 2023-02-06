@@ -22,7 +22,7 @@
 numThreads=8
 
 # Load stringtie v1.3.3b
-module load stringtie
+module load stringtie/1.3.3b
 
 # Run stringtie
 pwd; hostname; date

@@ -21,7 +21,7 @@
 numThreads=2
 
 # Load stringtie v1.3.3b
-module load stringtie
+module load stringtie/1.3.3b
 
 # Define query files
 queries=($(ls *.uniq.bam | xargs -n 1 basename | sed 's/.uniq.bam//g'))

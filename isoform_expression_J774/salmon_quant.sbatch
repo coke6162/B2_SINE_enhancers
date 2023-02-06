@@ -34,7 +34,7 @@ echo "Processing sample: "${queries[$SLURM_ARRAY_TASK_ID]}
 echo $(date +"[%b %d %H:%M:%S] Starting salmon pseudo-alignment...")
 
 salmon quant \
--i index/ \
+-i index/salmon \
 -p ${numThreads} \
 --geneMap all_samples_merged_transcripts_decoy.fa \
 -1 <(gunzip -c ${queries[$SLURM_ARRAY_TASK_ID]}_R1_trimmed.fastq.gz) \
