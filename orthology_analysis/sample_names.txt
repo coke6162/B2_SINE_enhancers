@@ -1,0 +1,5 @@
+#run	sample
+SRR3939682	qiao_mono_UT_R1
+SRR3939683	qiao_mono_IFNG_24h_R1
+SRR3939684	qiao_mono_UT_R2
+SRR3939685	qiao_mono_IFNG_24h_R2

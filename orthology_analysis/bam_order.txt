@@ -1,0 +1,4 @@
+qiao_mono_UT_R1.sorted.uniq.bam
+qiao_mono_UT_R2.sorted.uniq.bam
+qiao_mono_IFNG_24h_R1.sorted.uniq.bam
+qiao_mono_IFNG_24h_R2.sorted.uniq.bam
