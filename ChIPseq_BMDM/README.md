@@ -1,6 +1,6 @@
 All bash scripts were written to be run using SLURM on the HPC cluster at the University of Colorado Boulder. Some scripts are written to be run in parallel as job arrays.
 
-Accession numbers and corresponding sample names are provided in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/sample_names.txt). These scripts assume that all samples are named as described in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/sample_names.txt). Samples may be download from SRA using the provided SRR IDs using sra-tools (script not provided). For simplicity all input and output files are written to the same directory.
+Accession numbers and corresponding sample names are provided in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/sample_names.txt). These scripts assume that all samples are named as described in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/sample_names.txt). Samples may be downloaded from SRA using the provided SRR IDs using sra-tools (script not provided). For simplicity all input and output files are written to the same directory.
 
 A typical ChIP-seq workflow to call peaks looks like this:
 1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/bbduk.sbatch)
@@ -35,9 +35,6 @@ Assess distribution of p-values for predicted GAS motifs that overlap B2 SINE el
 3. [get_fimo_pval_box_whisker.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/get_fimo_pval_box_whisker.sbatch)
 4. [B2_GAS_whisker.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ChIPseq_BMDM/B2_GAS_whisker.R)
 
-Bonus files:
-* Differential AME analysis
-
 Required packages:
 * BBMap v38.05 (https://jgi.doe.gov/data-and-tools/bbtools/)
 * FastQC v0.11.8 (https://github.com/s-andrews/FastQC)
@@ -53,7 +50,7 @@ Required packages:
 * deepTools v3.5.1 (https://deeptools.readthedocs.io/en/develop/index.html)
 
 Note that the soft masked mm10 assembly file may be downloaded via:
-* mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
+* [mm10.fa](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz)
 
 Other files referenced in these scripts that have been provided through this repository:
 * [adapters.fa](https://github.com/coke6162/B2_SINE_enhancers/blob/main/RNAseq_BMDM/adapters.fa)
