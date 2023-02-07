@@ -21,7 +21,7 @@
 module load python/2.7.14/tetranscripts/2.1.4
 
 # Specify R library paths
-export R_LIBS='/Users/coke6162/R/x86_64-redhat-linux-gnu-library/3.6/'
+export R_LIBS='/Users/path/to/R/x86_64-redhat-linux-gnu-library/3.6/'
 
 # Run TEtranscripts
 pwd; hostname; date

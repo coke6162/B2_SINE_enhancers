@@ -58,7 +58,7 @@ data_picc_combined_STAT1_B2_Mm2 <- data_picc_combined_STAT1_B2_Mm2 %>% group_by(
 data_plat_2h_STAT1_B2_Mm2 <- data_plat_2h_STAT1_B2_Mm2 %>% group_by(group) %>% mutate(mean = mean(counts), se = std.error(counts)) %>% as.data.frame()
 
 # Import font
-font_add("Arial", "/scratch/Users/coke6162/tmp/Fonts/Arial.ttf")
+font_add("Arial", "/scratch/Users/path/to/tmp/Fonts/Arial.ttf")
 showtext_auto()
 
 # Plot unbound B2_Mm2 (Piccolo et al. 2017)
