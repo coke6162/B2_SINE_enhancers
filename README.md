@@ -41,6 +41,7 @@ List of programs used for all analyses:
 * Salmon v1.9.0 (https://combine-lab.github.io/salmon/)
 * Pairix v0.3.7 (https://github.com/4dn-dcic/pairix)
 * Juicer v1.6 (https://github.com/aidenlab/juicer)
+* Activity-by-Contact Model v0.2.2 (https://github.com/broadinstitute/ABC-Enhancer-Gene-Prediction)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
 ChIP-seq and RNA-seq data in murine primary bone marrow derived macrophages (BMDMs) were downloaded from publicly available datasets and processed as described below. All data were aligned to mm10. 
