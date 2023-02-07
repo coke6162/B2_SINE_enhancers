@@ -16,10 +16,10 @@ Required packages:
 * deepTools v3.5.1 (https://deeptools.readthedocs.io/en/develop/index.html)
 
 Note that the soft masked mm10 assembly file may be downloaded via:
-* mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
+* [mm10.fa](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz)
 
 The RepeatMasker output file for mm10 using Dfam 2.0 annotation may be downloaded via:
-* mm10.fa.out (referenced in scripts as mm10_dfam.out) - https://www.repeatmasker.org/genomes/mm10/RepeatMasker-rm406-dfam2.0/mm10.fa.out.gz
+* [mm10.fa.out](https://www.repeatmasker.org/genomes/mm10/RepeatMasker-rm406-dfam2.0/mm10.fa.out.gz) (referenced in scripts as mm10_dfam.out)
 
 Other files referenced in these scripts that have been provided through this repository:
 * [MA0137.3.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0137.3.meme), [MA0139.1.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0139.1.meme), [MA0517.1.meme](https://github.com/coke6162/B2_SINE_enhancers/blob/main/motif_analysis/MA0517.1.meme)
