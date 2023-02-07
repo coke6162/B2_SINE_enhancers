@@ -17,5 +17,5 @@ Required packages:
 * Salmon v1.9.0 (https://combine-lab.github.io/salmon/)
 
 Note that the soft masked mm10 assembly and Gencode vM18 gene annotation file may be downloaded via:
-* mm10.fa - http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
-* gencode.vM18.annotation.gtf - https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M18/gencode.vM18.annotation.gtf.gz
+* [mm10.fa](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz)
+* [gencode.vM18.annotation.gtf](https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M18/gencode.vM18.annotation.gtf.gz)
