@@ -10,6 +10,7 @@ List of publicly available data used in this study:
 * [Cuartero, S., Weiss, F.D., Dharmalingam, G. et al. Control of inducible gene expression links cohesin to hematopoietic progenitor self-renewal and differentiation. Nat Immunol 19(9), 932–941 (2018).](https://www.nature.com/articles/s41590-018-0184-1) RAD21 ChIP-seq (SRR6492207)
 * [Gualdrini, F., Polletti, S., Simonatto, M., et al. H3K9 trimethylation in active chromatin restricts the usage of functional CTCF sites in SINE B2 repeats. Genes Dev 36(7-8), 414-432 (2022).](https://doi.org/10.1101%2Fgad.349282.121) CTCF ChIP-seq (SRR17090500, SRR17090494)
 * [Platanitis, E., Gruener, S., Ravi Sundar Jose Geetha, A., et al. Interferons reshape the 3D conformation and accessibility of macrophage chromatin. iScience 25(3), (2022).](https://doi.org/10.1016/j.isci.2022.103840) ATAC-seq and Hi-C (PRJNA694816)
+* [Qiao, Y., Kang, K., Giannopoulou, E., et al. IFN-γ Induces Histone 3 Lysine 27 Trimethylation at a Small Subset of Promoters to Stably Silence Gene Expression in Human Macrophages. Cell Rep. 16(12), 3121-3129 (2016).](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5079287/) Human RNA-seq (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84692)
 
 ## UCSC Genome Browser Session:
 bigWig files for all samples analyzed in this study may be visualized on the UCSC Genome Browser [here](https://genome.ucsc.edu/s/coke6162/B2_SINE_enhancers_Horton_et_al).
@@ -38,6 +39,8 @@ List of programs used for all analyses:
 * Cufflinks v2.2.1 (http://cole-trapnell-lab.github.io/cufflinks/)
 * Stringtie v1.3.3b (https://ccb.jhu.edu/software/stringtie/)
 * Salmon v1.9.0 (https://combine-lab.github.io/salmon/)
+* Pairix v0.3.7 (https://github.com/4dn-dcic/pairix)
+* Juicer v1.6 (https://github.com/aidenlab/juicer)
 
 ## Regulatory activity of B2_Mm2 in innate immunity
 ChIP-seq and RNA-seq data in murine primary bone marrow derived macrophages (BMDMs) were downloaded from publicly available datasets and processed as described below. All data were aligned to mm10. 
@@ -126,16 +129,40 @@ We reanalyzed publicly available ATAC-seq and Hi-C data from IFNG-stimulated mur
 7. [macs2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ATACseq_BMDM/macs2.sbatch)
 
 **Hi-C Workflow:**
+1. [bwa.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/bwa.sbatch)
+2. [pairtools_parse.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/pairtools_parse.sbatch)
+3. [pairtools_sort.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/pairtools_sort.sbatch)
+4. [pairtools_merge.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/pairtools_merge.sbatch)
+5. [pairtools_dedup.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/pairtools_dedup.sbatch)
+6. [pairtools_filter.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/pairtools_filter.sbatch)
+7. [run_generate_site_positions.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/run_generate_site_positions.sbatch)
+8. [run_addfrag2pairs.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/run_addfrag2pairs.sbatch)
+9. [juicer_pre.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/juicer_pre.sbatch)
+10. [juicebox_dump.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/HiC_BMDM/juicebox_dump.sbatch)
 
 **ABC Workflow:**
+1. [call_candidate_regions.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ABC_BMDM/call_candidate_regions.sbatch)
+2. [collapse_gene_boundaries.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ABC_BMDM/collapse_gene_boundaries.sbatch)
+3. [find_neighborhoods.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ABC_BMDM/find_neighborhoods.sbatch)
+4. [predict_enhancers.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ABC_BMDM/predict_enhancers.sbatch)
+5. [subset_and_intersect_enhancers.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/ABC_BMDM/subset_and_intersect_enhancers.sbatch)
 
 #### 5. Comparative analysis assessing regulatory contibutions of B2_Mm2 on innate immunity in mouse
 
-description
+We reanalyzed publicly available RNA-seq data from human CD14+ monocytes stimulated with IFNG for 24 hours to define a set of human ISGs, from which human-to-mouse one-to-one orthologs were identified. Mouse and human-to-mouse ISGs were binned according to species specificity, and the nearest STAT1-bound B2_Mm2 elements relative to each ISG or top putative B2_Mm2 enhancer predicted to interact with an ISG were identified.
 
 **Human RNA-seq Analysis Workflow:**
+1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/bbduk.sbatch)
+2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/fastqc.sbatch)
+3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/multiqc.sbatch)
+4. [hisat2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/hisat2.sbatch)
+5. [featureCounts.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/featureCounts.sbatch)
+6. [DESeq2.R](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/DESeq2.R)
 
-**Orthology Analysis:**
+**Orthology Analysis Workflow:**
+1. [generate_binary_matrix.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/generate_binary_matrix.sbatch)
+2. [identify_nearest_STAT1_B2_Mm2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/identify_nearest_STAT1_B2_Mm2.sbatch)
+3. [identify_interacting_ABC_B2_Mm2.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/identify_interacting_ABC_B2_Mm2.sbatch)
 
 #### 6. CRISPR-mediated deletion of B2_Mm2.Dicer1
 
