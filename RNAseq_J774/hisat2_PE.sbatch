@@ -17,7 +17,7 @@
 
 # Job name and output
 #SBATCH -J hisat2_PE
-#SBATCH -o /Users/%u/slurmOut//slurm-%A_%a.out
+#SBATCH -o /Users/%u/slurmOut/slurm-%A_%a.out
 #SBATCH -e /Users/%u/slurmErr/slurm-%A_%a.err
 
 # Set constant variables
