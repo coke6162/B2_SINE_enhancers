@@ -2,9 +2,10 @@ All bash scripts were written to be run using SLURM on the HPC cluster at the Un
 
 Accession numbers and corresponding sample names are provided in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/sample_names.txt). These scripts assume that all samples are named as described in [sample_names.txt](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/sample_names.txt). Samples may be downloaded from SRA using the provided SRR IDs using sra-tools (script not provided). For simplicity all input and output files are written to the same directory.
 
-The purpose of this analysis is to determine whether B2_Mm2 shows evidence of broadly shaping mouse innate immunity by defining mouse-specific ISGs with a predicted B2_Mm2-derived enhancer. 
+Note that sample_names.txt references only the files used for subsequent orthology analyses [Qiao et al. Cell Rep (2016)](https://www.ncbi.nlm.nih.gov/pubmed/27653678) (GSE84691). For the DESeq2 analysis using data from [McCann et al. Blood Adv (2022)](https://pubmed.ncbi.nlm.nih.gov/35500221/) (GSE176562; all UT & IFNG replicates included), the same pipeline was used but modified for stranded paired-end data.
 
-First, we re-analyzed publicly available RNA-seq data from human, IFNG-stimulated CD14+ monocytes to identify human ISGs. Note that, although classified as paired-end, these data when downloaded from SRA result in empty "R2" files (which can be confirmed by navigating to the samples on SRA). For this analysis these were deleted, and "R1" files were used as single-end data. Workflow:
+First, we re-analyzed publicly available RNA-seq data from human, IFNG-stimulated CD14+ monocytes to identify human ISGs. Note that, although classified as paired-end, these data when downloaded from SRA result in empty The purpose of this analysis is to determine whether B2_Mm2 shows evidence of broadly shaping mouse innate immunity by defining mouse-specific ISGs with a predicted B2_Mm2-derived enhancer. 
+"R2" files (which can be confirmed by navigating to the samples on SRA). For this analysis these were deleted, and "R1" files were used as single-end data. Workflow:
 1. [bbduk.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/bbduk.sbatch)
 2. [fastqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/fastqc.sbatch)
 3. [multiqc.sbatch](https://github.com/coke6162/B2_SINE_enhancers/blob/main/orthology_analysis/multiqc.sbatch)
